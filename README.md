@@ -9,9 +9,12 @@ This container is meant to be used by someone understanding the logic within
 [`main.sh`](main.sh).
 
 You have to specify an SSH key in the folder `/root/.ssh/` (for example
-`/root/.ssh/id_ed25519`). This is best done via container secret files. Add the
-ssh public key to the backup repo and only to this repo. GitHub has a "Deploy
-keys" section in the repo settings.
+`/root/.ssh/id_ed25519`). This is best done via container secret files. Use a
+separate ssh key for the backup repo and only to this repo. GitHub has a "Deploy
+keys" section in the repo settings to do this.
+
+When using your own git server you also need to specify
+`/root/.ssh/known_hosts`. The predefined one is only for GitHub as an example.
 
 You have to set the following environment variables:
 
