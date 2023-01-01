@@ -1,4 +1,4 @@
-FROM docker.io/library/alpine:3.17
+FROM docker.io/library/alpine:3
 RUN apk upgrade --no-cache \
 	&& apk add --no-cache bash git openssh-client-default rsync
 
