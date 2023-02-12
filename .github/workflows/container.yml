@@ -3,9 +3,13 @@ name: Build container
 on:
   push:
   pull_request:
-  # Build regularly in order to have up to date packages in the edge image
+  # Build regularly in order to have up to date base image & packages in the edge image
   schedule:
     - cron: '42 2 * * 6' # weekly on Saturday 2:42 UTC
+
+permissions:
+  contents: read
+  packages: write
 
 jobs:
   docker:
