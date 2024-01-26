@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+
+# Load bash loadable sleep which doesnt spawn a new process for sleep then. When it doesnt work just use the executable and ignore the error
+enable -f /usr/lib/bash/sleep sleep 2>/dev/null
+
 set -eux
 
 INTERVAL_MINUTES=${INTERVAL_MINUTES:-"60 * 5"} # default to every 5 hours
