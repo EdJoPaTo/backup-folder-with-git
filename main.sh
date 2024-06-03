@@ -22,6 +22,8 @@ while true; do
 
 	git push
 
+	((INTERVAL_MINUTES > 0)) || break
+
 	sleep $((60 * INTERVAL_MINUTES))
 
 	git pull --ff-only

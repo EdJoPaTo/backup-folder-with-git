@@ -25,5 +25,6 @@ environment variables:
 
 - `INTERVAL_MINUTES` should be a number of minutes to wait between two backups.
   Defaults to `300` = 5 hours.
+  Set to `0` to stop after first run.
 - `DATAPATH` can be used to back up only a path within the `/data` mount.
 - `BACKUPPATH` is the same for a path within the backup repository.
